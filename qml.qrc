@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Cerchia.ui.qml</file>
+        <file>Promo.ui.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>images/cerchia.png</file>
+        <file>images/mappa.png</file>
+        <file>images/qr.png</file>
+        <file>images/tlr.png</file>
+        <file>images/shop1.png</file>
+        <file>images/shop2.png</file>
+        <file>images/shop3.png</file>
+        <file>Mappa.ui.qml</file>
+        <file>images/marker.png</file>
+        <file>Swipe.ui.qml</file>
+        <file>images/barlogo.png</file>
+        <file>Unosso.ui.qml</file>
+        <file>Codice.ui.qml</file>
+        <file>Sfide.ui.qml</file>
+        <file>images/promo.png</file>
+        <file>images/personalqr.png</file>
+        <file>Comunicazioni.ui.qml</file>
+        <file>Sconti.ui.qml</file>
+        <file>images/sconto.png</file>
+    </qresource>
+</RCC>

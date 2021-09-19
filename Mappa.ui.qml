@@ -1,6 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Controls.Material 2.2
+import QtQuick.Layouts 1.12
 import QtLocation 5.9
 import QtPositioning 5.9
 
@@ -13,15 +14,56 @@ Page {
         Material.primary: Material.Pink
         contentHeight: toolButton.implicitHeight
 
-        ToolButton {
-            id: toolButton
-            text: "\u2632"
-            font.pixelSize: Qt.application.font.pixelSize * 1.6
+        Label {
+            text: qsTr("Mappa")
+            anchors.centerIn: parent
+        }
+    }
+
+    Popup {
+        id: popup
+        x: stackView.width/2 - popup.width/2
+        y: 80
+        width: stackView.width - 20
+        height: 400
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+
+        Text {
+            width: popup.width - 20
+            y: 40
+            text: qsTr("FILTRI")
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 20
         }
 
-        Label {
-            text: qsTr("MAPPA")
-            anchors.centerIn: parent
+        ListView {
+            width: parent.width
+            height: 100
+            x: 0
+            y: 100
+            model: [ ["Tutti i negozi TLR", "barlogo"], ["I miei negozi", "barlogo"], ["I negozi dei tuoi amici", "barlogo"] ]
+            delegate: RadioDelegate {
+                text: modelData[0]
+                leftPadding: 50
+                width: parent.width
+                checked: index == 0
+                Image {
+                    x: 15
+                    y: parent.height/2 - height/2
+                    width: 20
+                    height: 20
+                    source: "qrc:/images/" + modelData[1] + ".png"
+                }
+            }
+        }
+
+        Button {
+            id: close
+            x: popup.width/2 - width/2
+            y: 310
+            text: qsTr("Applica")
         }
     }
 
@@ -45,6 +87,39 @@ Page {
         Component.onCompleted: {
             markerModel.addMarker(QtPositioning.coordinate(45.402, 11.871))
             markerModel.addMarker(QtPositioning.coordinate(45.406, 11.877))
+        }
+
+        Rectangle {
+            x: swipeView.width/2 - width/2
+            y: 10
+            radius: 15
+            width: swipeView.width - 20
+            height: 50
+
+            TextInput {
+                x: 60
+                y: parent.height/2 - height/2
+                width: parent.width - 70
+
+                property string placeholderText: "Cerca qui"
+
+                Text {
+                    text: parent.placeholderText
+                    color: "#aaa"
+                    visible: !parent.text
+                }
+            }
+            Image {
+                x: 20
+                y: parent.height/2 - height/2
+                width: 20
+                height: 20
+                source: "qrc:/images/filtri.png"
+                MouseArea {
+                    id: toolButton
+                    anchors.fill: parent
+                }
+            }
         }
     }
 
@@ -136,5 +211,15 @@ Page {
                 }
             }
         }
+    }
+
+    Connections {
+        target: toolButton
+        onClicked: popup.open()
+    }
+
+    Connections {
+        target: close
+        onClicked: popup.close()
     }
 }

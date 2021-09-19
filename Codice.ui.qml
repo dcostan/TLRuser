@@ -1,22 +1,26 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.2
 import QtGraphicalEffects 1.0
 
 Page {
     width: stackView.width
     height: stackView.height
 
-    header: Label {
-        text: qsTr("IL TUO CODICE")
-        font.bold: true
-        horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: Qt.application.font.pixelSize * 2
-        padding: 30
+    header: ToolBar {
+        Material.elevation: 0
+        Material.primary: Material.Pink
+        contentHeight: toolButton.implicitHeight
+
+        Label {
+            text: qsTr("Il tuo codice")
+            anchors.centerIn: parent
+        }
     }
 
     Text {
         x: parent.width/2 - width/2
-        y: 10
+        y: 30
         width: parent.width
         text: qsTr("Saldo token: 155")
         wrapMode: Label.WordWrap
@@ -27,7 +31,7 @@ Page {
     Image {
         id: qr
         x: parent.width/2 - width/2
-        y: 40
+        y: 60
         width: parent.width - 60
         height: width
         source: "qrc:/images/personalqr.png"

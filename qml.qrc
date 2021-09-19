@@ -23,5 +23,21 @@
         <file>Comunicazioni.ui.qml</file>
         <file>Sconti.ui.qml</file>
         <file>images/sconto.png</file>
+        <file>NuovoSconto.ui.qml</file>
+        <file>images/add.png</file>
+        <file>images/discount.png</file>
+        <file>ScontoCreato.ui.qml</file>
+        <file>images/spunta.png</file>
+        <file>Acquisti.ui.qml</file>
+        <file>Invita.ui.qml</file>
+        <file>NuovoInvito.ui.qml</file>
+        <file>InvitoCreato.ui.qml</file>
+        <file>Recensioni.ui.qml</file>
+        <file>ModificaRecensione.ui.qml</file>
+        <file>images/beer.png</file>
+        <file>images/clothes-hanger.png</file>
+        <file>images/sushi.png</file>
+        <file>images/sfide.png</file>
+        <file>images/filtri.png</file>
     </qresource>
 </RCC>

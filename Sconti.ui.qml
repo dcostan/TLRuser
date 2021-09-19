@@ -1,6 +1,5 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-import QtQuick.Particles 2.0
 
 Page {
     width: stackView.width
@@ -13,5 +12,23 @@ Page {
         width: parent.width
         height: width/2
         source: "qrc:/images/sconto.png"
+    }
+
+    Image {
+        x: stackView.width/2 - width/2
+        y: stackView.height - 120
+        width: 100
+        height: 100
+        source: "qrc:/images/add.png"
+        MouseArea {
+            id: add
+            anchors.fill: parent
+        }
+    }
+
+
+    Connections {
+        target: add
+        onClicked: stackView.push("NuovoSconto.ui.qml")
     }
 }

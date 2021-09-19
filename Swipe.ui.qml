@@ -23,10 +23,10 @@ Page {
         Mappa {
         }
 
-        Codice {
+        Sfide {
         }
 
-        Sfide {
+        Codice {
         }
     }
 
@@ -91,12 +91,12 @@ Page {
                 y: parent.height/2 - height*2/3
                 width: 30
                 height: 30
-                source: "qrc:/images/qr.png"
+                source: "qrc:/images/sfide.png"
             }
             Label {
                 x: parent.width/2 - width/2
                 y: 33
-                text: qsTr("Codice")
+                text: qsTr("Sfide")
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: 10
             }
@@ -113,7 +113,7 @@ Page {
             Label {
                 x: parent.width/2 - width/2
                 y: 33
-                text: qsTr("Sfide")
+                text: qsTr("Codice")
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: 10
             }

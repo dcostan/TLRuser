@@ -5,7 +5,7 @@ Page {
     width: stackView.width
     height: stackView.height
 
-    title: qsTr("I tre scalini")
+    title: qsTr("I miei acquisti")
 
     ScrollView {
         id: frame
@@ -16,84 +16,31 @@ Page {
             contentHeight: 600
             width: parent.width
 
-            Image {
-                x: (stackView.width/2) - width/2
-                y: 20
-                width: 80
-                height: 80
-                source: "qrc:/images/shop3.png"
-            }
-
-            Text {
-                y: 120
-                width: stackView.width
-                text: qsTr("Status Argento")
-                horizontalAlignment: Text.AlignHCenter
-                font.pixelSize: 16
-            }
-
-            ProgressBar {
-                x: stackView.width/2 - width/2
-                y: 155
-                width: 200
-                value: 0.7
-            }
-
-            Text {
-                y: 180
-                width: stackView.width
-                text: qsTr("Raccogli 57 token per il prosimo status")
-                horizontalAlignment: Text.AlignHCenter
-                font.pixelSize: 14
-            }
-
-
-
-            Text {
-                x: 20
-                y: 255
-                text: qsTr("Attività")
-                color: "#9b9b9b"
-                horizontalAlignment: Text.AlignHCenter
-                font.pixelSize: 12
-            }
-
             ListView {
                 id: list
-                y: 280
+                y: 50
                 interactive: false
                 width: stackView.width
                 height: stackView.height
                 property string bgcolor: "#d9d9d9"
-                model: ["La mia recensione", "Bacheca", "I miei sconti", "I miei acquisti", "I miei inviti"]
+                model: [ ["27/9/2021", "16,00€"], ["25/9/2021", "170,00€"], ["12/11/2021", "11,00€"], ["29/08/2021", "120,00€"]]
                 delegate: ItemDelegate {
                     width: stackView.width
-                    onClicked: {
-                        if(index == 0)
-                            stackView.push("Recensioni.ui.qml")
-                        else if(index == 1)
-                            stackView.push("Comunicazioni.ui.qml")
-                        else if(index == 2)
-                            stackView.push("Sconti.ui.qml")
-                        else if(index == 3)
-                            stackView.push("Acquisti.ui.qml")
-                        else if(index == 4)
-                            stackView.push("Invita.ui.qml")
-                    }
+                    height: 100
                     Rectangle {
                         color: "#ffffff"
                         anchors.fill: parent
                         Text {
                             x: 50
                             y: parent.height/2 - height/2
-                            text: modelData
+                            text: modelData[0]
                             font.pixelSize: 13
                         }
                         Text {
-                            x: parent.width - 20
+                            x: parent.width - 110
                             y: parent.height/2 - height/2
-                            text: ">"
-                            color: list.bgcolor
+                            text: "<b>" + modelData[1] + "</b>"
+                            font.pixelSize: 17
                         }
                         Rectangle {
                             x: stackView.width - width

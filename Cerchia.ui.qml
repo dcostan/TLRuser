@@ -1,21 +1,25 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.2
 
 Page {
     width: stackView.width
     height: stackView.height
 
-    header: Label {
-        text: qsTr("LA TUA CERCHIA")
-        font.bold: true
-        horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: Qt.application.font.pixelSize * 2
-        padding: 30
+    header: ToolBar {
+        Material.elevation: 0
+        Material.primary: Material.Pink
+        contentHeight: toolButton.implicitHeight
+
+        Label {
+            text: qsTr("La tua cerchia")
+            anchors.centerIn: parent
+        }
     }
 
     Image {
         x: parent.width/2 - width/2
-        y: 0
+        y: 20
         width: 55
         height: 55
         source: "qrc:/images/tlr.png"
@@ -23,7 +27,7 @@ Page {
 
     Image {
         x: (swipeView.width/6) - width/2
-        y: 120
+        y: 140
         width: 60
         height: 60
         source: "qrc:/images/shop1.png"
@@ -44,7 +48,7 @@ Page {
 
     Image {
         x: (swipeView.width/2) - width/2
-        y: 120
+        y: 140
         width: 60
         height: 60
         source: "qrc:/images/shop2.png"
@@ -65,7 +69,7 @@ Page {
 
     Image {
         x: (swipeView.width*5/6) - width/2
-        y: 120
+        y: 140
         width: 60
         height: 60
         source: "qrc:/images/shop3.png"
@@ -79,7 +83,7 @@ Page {
         x: shop3.parent.x
         y: shop3.parent.y + shop3.height + 10
         width: shop3.width
-        text: qsTr("Unosso Bar")
+        text: qsTr("I tre scalini")
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 13
     }

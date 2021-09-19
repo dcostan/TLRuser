@@ -39,5 +39,17 @@
         <file>images/sushi.png</file>
         <file>images/sfide.png</file>
         <file>images/filtri.png</file>
+        <file>images/filippopicon.png</file>
+        <file>images/profile.png</file>
+        <file>images/tlricon.png</file>
+        <file>images/TLRslogan.png</file>
+        <file>ProfiloNegozio.ui.qml</file>
+        <file>images/recensioni.png</file>
+        <file>images/internet.png</file>
+        <file>images/posizione.png</file>
+        <file>images/telefono.png</file>
+        <file>images/time.png</file>
+        <file>images/elisa.png</file>
+        <file>images/davide.png</file>
     </qresource>
 </RCC>

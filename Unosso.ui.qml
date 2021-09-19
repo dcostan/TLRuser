@@ -22,6 +22,10 @@ Page {
                 width: 80
                 height: 80
                 source: "qrc:/images/shop3.png"
+                MouseArea {
+                    id: profile
+                    anchors.fill: parent
+                }
             }
 
             Text {
@@ -128,5 +132,10 @@ Page {
             }
 
         }
+    }
+
+    Connections {
+        target: profile
+        onClicked: stackView.push("ProfiloNegozio.ui.qml")
     }
 }

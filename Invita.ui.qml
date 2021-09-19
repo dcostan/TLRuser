@@ -99,8 +99,8 @@ Page {
     Image {
         x: stackView.width/2 - width/2
         y: stackView.height - 120
-        width: 100
-        height: 100
+        width: 70
+        height: 70
         source: "qrc:/images/add.png"
         MouseArea {
             id: add

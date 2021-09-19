@@ -1,7 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Controls.Material 2.2
-import QtQuick.Layouts 1.12
 import QtLocation 5.9
 import QtPositioning 5.9
 
@@ -43,17 +42,17 @@ Page {
             height: 100
             x: 0
             y: 100
-            model: [ ["Tutti i negozi TLR", "barlogo"], ["I miei negozi", "barlogo"], ["I negozi dei tuoi amici", "barlogo"] ]
+            model: [ ["Tutti i negozi TLR", "tlricon"], ["I miei negozi", "filippopicon"], ["I negozi dei tuoi amici", "profile"] ]
             delegate: RadioDelegate {
                 text: modelData[0]
-                leftPadding: 50
+                leftPadding: 70
                 width: parent.width
                 checked: index == 0
                 Image {
                     x: 15
                     y: parent.height/2 - height/2
-                    width: 20
-                    height: 20
+                    width: 35
+                    height: 35
                     source: "qrc:/images/" + modelData[1] + ".png"
                 }
             }
@@ -135,7 +134,7 @@ Page {
                 Canvas {
                     id: canvas
                     width: 250
-                    height: 200
+                    height: 230
                     antialiasing: true
                     visible: false
 
@@ -181,23 +180,42 @@ Page {
                         ctx.restore();
                     }
 
-                    Text {
+                    Image {
                         x: parent.rectx + 20
-                        y: parent.recty + 15
-                        width: parent.rectWidth - 30
-                        text: qsTr("Orario")
-                        wrapMode: Label.WordWrap
-                        font.pixelSize: 14
+                        y: parent.recty + 16
+                        width: 30
+                        height: 30
+                        source: "qrc:/images/shop3.png"
                     }
 
                     Text {
-                        x: parent.rectx + parent.rectWidth - 80
-                        y: parent.recty + parent.rectHeight - 25
+                        x: parent.rectx + 20
+                        y: parent.recty + 20
                         width: parent.rectWidth - 30
-                        text: qsTr("03/06/2021")
+                        text: qsTr("I tre scalini")
+                        font.bold: true
+                        horizontalAlignment: Text.AlignHCenter
                         wrapMode: Label.WordWrap
-                        font.pixelSize: 11
-                        color: "#d9d9d9"
+                        font.pixelSize: 17
+                    }
+
+                    Text {
+                        x: parent.rectx + 20
+                        y: parent.recty + 60
+                        width: parent.rectWidth - 30
+                        text: qsTr("Colazioni, aperitivi e pranzi espressi in un locale storico del '900 con area esterna e vista sui navigli.")
+                        wrapMode: Label.WordWrap
+                        font.pixelSize: 12
+                    }
+
+                    Text {
+                        x: parent.rectx + 20
+                        y: parent.recty + 125
+                        width: parent.rectWidth - 30
+                        text: qsTr("L'<b>85%</b> degli utenti TeLoRaccomanda")
+                        horizontalAlignment: Text.AlignHCenter
+                        wrapMode: Label.WordWrap
+                        font.pixelSize: 14
                     }
                 }
                 Image {
@@ -206,7 +224,7 @@ Page {
                     source: "qrc:/images/marker.png"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: canvas.visible = true
+                        onClicked: canvas.visible = !canvas.visible
                     }
                 }
             }

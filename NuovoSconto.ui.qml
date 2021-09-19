@@ -26,7 +26,7 @@ Page {
         x: stackView.width/2 - width/2
         y: 350
         width: parent.width - 50
-        text: qsTr("Vuoi convertire <b>100 token</b> per creare un nuovo sconto del <b>10% </b> presso <b>Unosso bar</b>?")
+        text: qsTr("Vuoi convertire <b>100 token</b> per creare un nuovo sconto del <b>10% </b> presso <b>I tre scalini</b>?")
         wrapMode: Label.WordWrap
         horizontalAlignment: Text.AlignHCenter
     }

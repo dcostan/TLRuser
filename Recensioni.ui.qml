@@ -9,7 +9,7 @@ Page {
 
     ItemDelegate {
         y: 20
-        text: "<b>Stai raccomando questo posto</b>"
+        text: "<b>Non stai raccomando questo posto</b>"
         width: stackView.width
         enabled: false
     }
@@ -26,23 +26,24 @@ Page {
         width: stackView.width - 50
         x: stackView.width/2 - width/2
         y: 110
-        text: qsTr("Classico bar universitario, buona posizione e all'estero molto bello con tavoli che danno su porta Portello. Purtroppo se vi sedete fuori non fanno servizio al tavolo, il che non sarebbe un problema se non ti facessero comunque pagare un caffè 1,10 €")
+        text: qsTr("")
         wrapMode: Label.WordWrap
         enabled: false
     }
 
     Text {
         x: 30
-        y: 290
+        y: 285
         width: parent.width
         text: qsTr("TOP 3 RACCOMANDATI")
     }
 
     TextField {
+        id: racc1
         width: stackView.width - 50 - 12
         x: stackView.width/2 - width/2 + 12
         y: 310
-        text: qsTr("Pizza margherita")
+        text: qsTr("")
         enabled: false
 
         Text {
@@ -59,10 +60,11 @@ Page {
 
 
     TextField {
+        id: racc2
         width: stackView.width - 50 - 12
         x: stackView.width/2 - width/2 + 12
         y: 360
-        text: qsTr("Birra rossa alla spina")
+        text: qsTr("")
         enabled: false
 
         Text {
@@ -79,10 +81,11 @@ Page {
 
 
     TextField {
+        id: racc3
         width: stackView.width - 50 - 12
         x: stackView.width/2 - width/2 + 12
         y: 410
-        text: qsTr("Tiramisù")
+        text: qsTr("")
         enabled: false
 
         Text {
@@ -114,6 +117,13 @@ Page {
 
     Connections {
         target: confirm
-        onClicked: stackView.push("ModificaRecensione.ui.qml")
+        onClicked: {
+            stackView.push("ModificaRecensione.ui.qml")
+            new Promise(resolve => setTimeout(resolve, (2000)))
+            write.text = "Reparto scarpe sempre superfornito per ogni tipo di esigenza. Commessi molto disponibili e preparati."
+            racc1.text = "Reparto scarpe"
+            racc2.text = "Collezione"
+            racc3.text = "Calze sportive"
+        }
     }
 }

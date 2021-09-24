@@ -25,13 +25,13 @@ Page {
         width: stackView.width - 50
         x: stackView.width/2 - width/2
         y: 110
-        text: qsTr("Classico bar universitario, buona posizione e all'estero molto bello con tavoli che danno su porta Portello. Purtroppo se vi sedete fuori non fanno servizio al tavolo, il che non sarebbe un problema se non ti facessero comunque pagare un caffè 1,10 €")
+        placeholderText: qsTr("Scrivi qui...")
         wrapMode: Label.WordWrap
     }
 
     Text {
         x: 30
-        y: 290
+        y: 285
         width: parent.width
         text: qsTr("TOP 3 RACCOMANDATI")
     }
@@ -40,7 +40,7 @@ Page {
         width: stackView.width - 50 - 12
         x: stackView.width/2 - width/2 + 12
         y: 310
-        text: qsTr("Pizza margherita")
+        placeholderText: qsTr("Prima raccomandazione...")
 
         Text {
             anchors {
@@ -59,7 +59,7 @@ Page {
         width: stackView.width - 50 - 12
         x: stackView.width/2 - width/2 + 12
         y: 360
-        text: qsTr("Birra rossa alla spina")
+        placeholderText: qsTr("Seconda raccomandazione...")
 
         Text {
             anchors {
@@ -78,7 +78,7 @@ Page {
         width: stackView.width - 50 - 12
         x: stackView.width/2 - width/2 + 12
         y: 410
-        text: qsTr("Tiramisù")
+        placeholderText: qsTr("Terza raccomandazione...")
 
         Text {
             anchors {

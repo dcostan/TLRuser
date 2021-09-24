@@ -5,7 +5,7 @@ Page {
     width: stackView.width
     height: stackView.height
 
-    title: qsTr("I tre scalini")
+    title: qsTr("Sushi Attimi")
 
     ScrollView {
         id: frame
@@ -21,7 +21,7 @@ Page {
                 y: 20
                 width: 80
                 height: 80
-                source: "qrc:/images/shop3.png"
+                source: "qrc:/images/shop2.png"
                 MouseArea {
                     id: profile
                     anchors.fill: parent
@@ -40,13 +40,13 @@ Page {
                 x: stackView.width/2 - width/2
                 y: 155
                 width: 200
-                value: 0.7
+                value: 0.1
             }
 
             Text {
                 y: 180
                 width: stackView.width
-                text: qsTr("Raccogli 57 token per il prosimo status")
+                text: qsTr("Raccogli 315 token per il prossimo status")
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: 14
             }
@@ -136,6 +136,6 @@ Page {
 
     Connections {
         target: profile
-        onClicked: stackView.push("ProfiloNegozio.ui.qml")
+        onClicked: stackView.push("ProfiloNegozio2.ui.qml")
     }
 }

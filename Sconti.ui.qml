@@ -8,10 +8,12 @@ Page {
     title: qsTr("I miei sconti")
 
     Image {
+        id: sconto
         y: 20
         width: parent.width
         height: width/2
         source: "qrc:/images/sconto.png"
+        visible: false
     }
 
     Image {
@@ -29,6 +31,10 @@ Page {
 
     Connections {
         target: add
-        onClicked: stackView.push("NuovoSconto.ui.qml")
+        onClicked: {
+            stackView.push("NuovoSconto.ui.qml")
+            new Promise(resolve => setTimeout(resolve, (2000)))
+            sconto.visible = true
+        }
     }
 }

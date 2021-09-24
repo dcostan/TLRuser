@@ -185,14 +185,14 @@ Page {
                         y: parent.recty + 16
                         width: 30
                         height: 30
-                        source: "qrc:/images/shop3.png"
+                        source: "qrc:/images/shop1.png"
                     }
 
                     Text {
                         x: parent.rectx + 20
                         y: parent.recty + 20
                         width: parent.rectWidth - 30
-                        text: qsTr("I tre scalini")
+                        text: qsTr("Moda Sport")
                         font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         wrapMode: Label.WordWrap
@@ -203,7 +203,7 @@ Page {
                         x: parent.rectx + 20
                         y: parent.recty + 60
                         width: parent.rectWidth - 30
-                        text: qsTr("Colazioni, aperitivi e pranzi espressi in un locale storico del '900 con area esterna e vista sui navigli.")
+                        text: qsTr("Rivenditore storico di attrezzatura e abbigliamento per un'ampia varietà di sport e attività all'aperto.")
                         wrapMode: Label.WordWrap
                         font.pixelSize: 12
                     }
@@ -212,7 +212,7 @@ Page {
                         x: parent.rectx + 20
                         y: parent.recty + 125
                         width: parent.rectWidth - 30
-                        text: qsTr("L'<b>85%</b> degli utenti TeLoRaccomanda")
+                        text: qsTr("Il <b>93%</b> degli utenti TeLoRaccomanda")
                         horizontalAlignment: Text.AlignHCenter
                         wrapMode: Label.WordWrap
                         font.pixelSize: 14

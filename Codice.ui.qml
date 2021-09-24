@@ -18,6 +18,56 @@ Page {
         }
     }
 
+    Popup {
+        id: popup
+        x: stackView.width/2 - popup.width/2
+        y: 80
+        width: stackView.width - 20
+        height: 400
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+
+        Text {
+            width: popup.width - 20
+            y: 40
+            text: qsTr("TRANSAZIONE EFFETTUATA")
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 20
+        }
+
+        Image {
+            x: popup.width/2 - width/2
+            y: 55
+            width: 150
+            height: width
+            source: "qrc:/images/spunta.png"
+        }
+
+        Text {
+            width: popup.width - 20
+            y: 210
+            text: qsTr("Hai guadagnato <b>90</b> token!")
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 16
+        }
+
+        Text {
+            width: popup.width - 20
+            y: 250
+            text: qsTr("Ora il tuo saldo è salito a <b>145</b> token")
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 16
+        }
+
+        Button {
+            id: close
+            x: popup.width/2 - width/2
+            y: 300
+            text: qsTr("Continua")
+        }
+    }
+
     Text {
         x: parent.width/2 - width/2
         y: 30
@@ -51,13 +101,17 @@ Page {
             width: 150
             height: width
             source: "qrc:/images/personalqr.png"
+            MouseArea {
+                id: transactionCompleted
+                anchors.fill: parent
+            }
         }
 
         Text {
             x: 30
             y: 260
             width: parent.width
-            text: qsTr("Filippo Pataro")
+            text: qsTr("Davide Costa")
             font.bold: true
             font.italic: true
             font.pixelSize: 18
@@ -94,5 +148,15 @@ Page {
         wrapMode: Label.WordWrap
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 12
+    }
+
+    Connections {
+        target: transactionCompleted
+        onDoubleClicked: popup.open()
+    }
+
+    Connections {
+        target: close
+        onClicked: popup.close()
     }
 }

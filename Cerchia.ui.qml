@@ -41,7 +41,7 @@ Page {
         x: shop1.parent.x
         y: shop1.parent.y + shop1.height + 10
         width: shop1.width
-        text: qsTr("JoyStore")
+        text: qsTr("Moda Sport")
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 13
     }
@@ -90,8 +90,18 @@ Page {
 
 
     Connections {
+        target: shop1
+        onClicked: stackView.push("Modasport.ui.qml")
+    }
+
+    Connections {
+        target: shop2
+        onClicked: stackView.push("Attimi.ui.qml")
+    }
+
+    Connections {
         target: shop3
-        onClicked: stackView.push("Unosso.ui.qml")
+        onClicked: stackView.push("Trescalini.ui.qml")
     }
 
 }

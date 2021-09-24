@@ -15,7 +15,7 @@
         <file>images/marker.png</file>
         <file>Swipe.ui.qml</file>
         <file>images/barlogo.png</file>
-        <file>Unosso.ui.qml</file>
+        <file>Trescalini.ui.qml</file>
         <file>Codice.ui.qml</file>
         <file>Sfide.ui.qml</file>
         <file>images/promo.png</file>
@@ -35,7 +35,6 @@
         <file>Recensioni.ui.qml</file>
         <file>ModificaRecensione.ui.qml</file>
         <file>images/beer.png</file>
-        <file>images/clothes-hanger.png</file>
         <file>images/sushi.png</file>
         <file>images/sfide.png</file>
         <file>images/filtri.png</file>
@@ -43,7 +42,7 @@
         <file>images/profile.png</file>
         <file>images/tlricon.png</file>
         <file>images/TLRslogan.png</file>
-        <file>ProfiloNegozio.ui.qml</file>
+        <file>ProfiloNegozio3.ui.qml</file>
         <file>images/recensioni.png</file>
         <file>images/internet.png</file>
         <file>images/posizione.png</file>
@@ -51,5 +50,48 @@
         <file>images/time.png</file>
         <file>images/elisa.png</file>
         <file>images/davide.png</file>
+        <file>Attimi.ui.qml</file>
+        <file>Modasport.ui.qml</file>
+        <file>ProfiloNegozio2.ui.qml</file>
+        <file>ProfiloNegozio1.ui.qml</file>
+        <file>images/food.png</file>
+        <file>images/shoes.png</file>
+        <file>images/ornamenti/4.png</file>
+        <file>images/ornamenti/3.png</file>
+        <file>images/ornamenti/2.png</file>
+        <file>images/ornamenti/1.png</file>
+        <file>images/sfide/sfida8.png</file>
+        <file>images/sfide/sfida7.png</file>
+        <file>images/sfide/sfida6.png</file>
+        <file>images/sfide/sfida5.png</file>
+        <file>images/sfide/sfida4.png</file>
+        <file>images/sfide/sfida3.png</file>
+        <file>images/sfide/sfida2.png</file>
+        <file>images/sfide/sfida1.png</file>
+        <file>images/sfide/badge3.png</file>
+        <file>images/sfide/badge2.png</file>
+        <file>images/sfide/badge1.png</file>
+        <file>images/sfide/sfida9.png</file>
+        <file>images/sfide/win.png</file>
+        <file>Tutorial.ui.qml</file>
+        <file>images/tutorial/19.png</file>
+        <file>images/tutorial/18.png</file>
+        <file>images/tutorial/17.png</file>
+        <file>images/tutorial/16.png</file>
+        <file>images/tutorial/15.png</file>
+        <file>images/tutorial/14.png</file>
+        <file>images/tutorial/13.png</file>
+        <file>images/tutorial/12.png</file>
+        <file>images/tutorial/11.png</file>
+        <file>images/tutorial/10.png</file>
+        <file>images/tutorial/9.png</file>
+        <file>images/tutorial/8.png</file>
+        <file>images/tutorial/7.png</file>
+        <file>images/tutorial/6.png</file>
+        <file>images/tutorial/5.png</file>
+        <file>images/tutorial/4.png</file>
+        <file>images/tutorial/3.png</file>
+        <file>images/tutorial/2.png</file>
+        <file>images/tutorial/1.png</file>
     </qresource>
 </RCC>

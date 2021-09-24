@@ -11,7 +11,7 @@ ApplicationWindow {
     header: ToolBar {
         Material.primary: Material.Pink
         contentHeight: toolButton.implicitHeight
-        visible: stackView.depth > 1
+        visible: stackView.depth > 1 && stackView.currentItem.title !== "Tutorial"
 
         ToolButton {
             id: toolButton
@@ -34,5 +34,8 @@ ApplicationWindow {
         id: stackView
         initialItem: "Swipe.ui.qml"
         anchors.fill: parent
+        property int tutorialIndex: 1
     }
+
+    Component.onCompleted: stackView.push("Tutorial.ui.qml")
 }

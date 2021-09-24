@@ -132,7 +132,7 @@ Page {
                 width: stackView.width
                 height: stackView.height
                 property string bgcolor: "#d9d9d9"
-                model: [ ["elisa", "Elisa Morini<br><i>Status oro</i><br><p>Pochi sorriso, posti al sole, ma tramezzini buoni e ricolmi di cibo. Paninazzi onti buoni, ma niente a che vedere con i paninazzi onti dei competitor. Certo ormai sono un posto affollatissimo per gli universitari ma mai e poi mai ci avrei fatto un rinfresco di laurea.</p>"],
+                model: [ ["elisa", "Elisa Morini<br><i>Status oro</i><br><p>Pochi sorrisi, posti al sole, ma tramezzini buoni e ricolmi di cibo. Paninazzi onti buoni, ma niente a che vedere con i paninazzi onti dei competitor. Certo ormai sono un posto affollatissimo per gli universitari ma mai e poi mai ci avrei fatto un rinfresco di laurea.</p>"],
                     ["davide", "Davide Costa<br><i>Status platino</i><br><p>Servizio cordiale e disponibile ambiente pulito e ordinato
 prodotti freschi e di qualità.
 Ideale per feste di laurea viste le due sale interne che si possono riservare.
